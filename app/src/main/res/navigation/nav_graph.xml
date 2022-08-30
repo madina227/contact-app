@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        tools:layout="@layout/screen_main"
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.task.ui.screens.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_addContactScreen"
+            app:destination="@id/addContactScreen"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_mainScreen_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_add_contact"
+        android:id="@+id/addContactScreen"
+        android:name="uz.gita.task.ui.screens.AddContactScreen"
+        android:label="AddContactScreen" />
+    <fragment
+        tools:layout="@layout/screen_edit_contact"
+        android:id="@+id/editFragment"
+        android:name="uz.gita.task.ui.screens.EditFragment"
+        android:label="EditFragment" />
+</navigation>
